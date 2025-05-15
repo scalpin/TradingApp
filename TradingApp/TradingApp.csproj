@@ -23,6 +23,7 @@
     </PackageReference>
   </ItemGroup>
 
+	<!--
 	<ItemGroup>
 		<Protobuf Include="proto\tradeapi\v1\events.proto" GrpcServices="Client" ProtoRoot="." />
 		<Protobuf Include="proto\tradeapi\v1\common.proto" GrpcServices="Client" ProtoRoot="." />
@@ -36,4 +37,7 @@
 		<Protobuf Include="proto\google\type\decimal.proto" GrpcServices="Client" />
 		<Protobuf Include="proto\google\type\interval.proto" GrpcServices="Client" />
 	</ItemGroup>
+	-->
+
+	
 </Project>

@@ -20,6 +20,10 @@ public class TradeService
     {
         _httpClient = new HttpClient();
         _settings = settingsService;
+
+        // Добавляем заголовок с токеном при инициализации
+        _httpClient.DefaultRequestHeaders.Add("X-Api-Key", _settings.Token);
+        _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
     }
 
     // Метод для размещения тейк-профит ордера
@@ -58,7 +62,11 @@ public class TradeService
         if (response.IsSuccessStatusCode)
             return true;
 
-        Console.WriteLine($"Ошибка: {response.StatusCode} - {responseBody}");
+        Console.ForegroundColor = ConsoleColor.Red;
+        System.Diagnostics.Debug.WriteLine($"Ошибка при отправке заявки:");
+        System.Diagnostics.Debug.WriteLine($"StatusCode: {response.StatusCode}");
+        System.Diagnostics.Debug.WriteLine($"Response: {responseBody}");
+        Console.ResetColor();
         return false;
     }
 

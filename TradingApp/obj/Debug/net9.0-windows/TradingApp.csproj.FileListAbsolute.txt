@@ -32,3 +32,4 @@ C:\Users\abros\OneDrive\Рабочий стол\Учебная\tradingBot\Tradin
 C:\Users\abros\OneDrive\Рабочий стол\Учебная\tradingBot\TradingApp\TradingApp\bin\Debug\net9.0-windows\Grpc.Net.Common.dll
 C:\Users\abros\OneDrive\Рабочий стол\Учебная\tradingBot\TradingApp\TradingApp\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\abros\OneDrive\Рабочий стол\Учебная\tradingBot\TradingApp\TradingApp\obj\Debug\net9.0-windows\TradingApp.csproj.Up2Date
+C:\Users\abros\OneDrive\Рабочий стол\Учебная\tradingBot\TradingApp\TradingApp\obj\Debug\net9.0-windows\TradingApp.sourcelink.json
