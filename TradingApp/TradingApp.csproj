@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="Config\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.30.2" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.71.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="proto\tradeapi\v1\events.proto" GrpcServices="Client" ProtoRoot="." />
+		<Protobuf Include="proto\tradeapi\v1\common.proto" GrpcServices="Client" ProtoRoot="." />
+		<Protobuf Include="proto\tradeapi\v1\orders.proto" GrpcServices="Client" ProtoRoot="." />
+		<Protobuf Include="proto\tradeapi\v1\portfolios.proto" GrpcServices="Client" ProtoRoot="." />
+		<Protobuf Include="proto\tradeapi\v1\marketdata_service.proto" GrpcServices="Client" ProtoRoot="." />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="proto\google\api\annotations.proto" GrpcServices="Client" />
+		<Protobuf Include="proto\google\type\decimal.proto" GrpcServices="Client" />
+		<Protobuf Include="proto\google\type\interval.proto" GrpcServices="Client" />
+	</ItemGroup>
+</Project>
